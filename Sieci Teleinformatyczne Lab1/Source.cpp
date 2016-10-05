@@ -1,34 +1,27 @@
 /*Robert Wyszecki
 Sieci Teleinformatyczne
-Laboratorium nr 1*/
+Laboratorium nr 1
+dzieñ ostatniej aktualizacji 05.10 2016*/
 
 #include <iostream>
 #include <cstdlib>
 #include <string>
 #include <cmath>
+#include <fstream>
+#include "function.h"
 
 using namespace std;
 
 int main(){
-	bool done = 1;
-	int choice = 0;
-	while (done){
-		cout << "1.Show text\n";
-		cout << "2.End\n";
-		cout << "Please choice operation: ";
-		cin >> choice;
-		switch (choice){
-			case 1: cout << "Hello" << endl;
-				break;
-			case 2: done = 0;
-				break;
-			default: cout << "ERROR! Unknown command" << endl;
-				break;
-		}
-		cin.clear();
-		cin.sync();
-	}
+	string startText;				//Zmienna pomocnicza przechowuj¹ca wczytany na pocz¹tku tekst
+	string startBinary;				//Zmienna przechowuj¹ca tekst startowy zapisany za pomoc¹ kodu binarnego
 
+
+	openFile(startText);
+	saveFile(startText);
+
+
+	
 	cin.get();
 	return 0;
 }
