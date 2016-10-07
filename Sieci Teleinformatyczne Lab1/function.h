@@ -36,8 +36,6 @@ void saveBinaryFile(string In, string &Out){
 		Out += b.to_string();
 	}
 
-
-
 	plik.close();
 }
 
@@ -129,8 +127,22 @@ void CRC(int bChoice){
 		}
 	}
 	
-	for (int i = 0; i < bChoice+1; i++){
-		cout << dzielnikCRC[i];
-	}
-	cout << endl;
+	
 }
+
+void sumaMod10(string start, string demage){
+	int sumaStart = 0;
+	int sumaDemage = 0;
+	for (int i = 0; i < start.size(); i++){
+		if (start[i] == '1')
+			sumaStart += 1;
+		if (demage[i] == '1')
+			sumaDemage += 1;
+	}
+	if (sumaStart%10 == sumaDemage%10)
+		cout << "Wiadomosc wyslana poprawnie" << endl;
+	else
+		cout << "Wiadomosc zostala uszkodzona podczas wyslania" << endl;
+}
+
+

@@ -1,7 +1,7 @@
 /*Robert Wyszecki
 Sieci Teleinformatyczne
 Laboratorium nr 1
-dzieñ ostatniej aktualizacji 05.10 2016*/
+data ostatniej aktualizacji 07.10 2016*/
 
 #pragma once
 #include <iostream>
@@ -27,6 +27,7 @@ int main(){
 	menu(&menuChoice, &bitChoice);						//menu programu
 	demageText(menuChoice, startBinary, demagedText);	//funkcja uszkadzaj¹ca plik startowy
 	bitParzystosci(startBinary, demagedText);			//funkcja sprawdzaj¹ca bit parzystosci
+	sumaMod10(startBinary, demagedText);				//funkcja sprawdzajaca sume modulo 10
 	CRC(bitChoice);
 
 	system("pause");
